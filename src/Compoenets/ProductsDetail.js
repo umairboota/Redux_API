@@ -29,12 +29,9 @@ const ProductsDetail = () => {
     };
   }, [productId]);
   return (
+    <>
     <div className="container mt-4">
-      {productId.lenght === 0 ? (
-        <div className="container">
-          <LoaderComponenet />
-        </div>
-      ) : (
+      {product? (
         <div className="row">
           <div className="col-md-6">
             <img src={image} style={{ height: "40rem" }} alt="...Loading" />
@@ -63,8 +60,9 @@ const ProductsDetail = () => {
             </div>
           </div>
         </div>
-      )}
+      ):(<LoaderComponenet/>)}
     </div>
+    </>
   );
 };
 

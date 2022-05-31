@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Loader from "./LoaderComponent";
+import LoaderComponenet from "./LoaderComponent";
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.products.products);
@@ -32,7 +32,7 @@ const ProductComponent = () => {
           <div className="col mt-2">{rederList}</div>
           <div className="col mt-2">{rederList}</div>
         </div>
-      </div>):(<Loader/>)}
+      </div>):(<LoaderComponenet/>)}
     </>
   );
 };
